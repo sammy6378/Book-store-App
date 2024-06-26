@@ -6,16 +6,11 @@
 }
 
 .form{
-  position: absolute;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  left: 40%;
-  top: 10%;
-  opacity: 0;
-  transform: translateY(15%);
-  transition: opacity .4s ease-in-out, transform .4s ease-in-out;
-  z-index: 1000;
+  z-index: 1700;
 }
 .active{
+  display: block;
   opacity: 1;
   transform: translateY(0%);
   transition: opacity .4s ease-in-out, transform .4s ease-in-out;
@@ -26,4 +21,20 @@
     left: 0;
     width: 100%;
   }
+  table{
+    z-index: 1400;
+  }
+  .left-nav{
+      position: absolute;
+      left:-50%;
+      width: 80%;
+      background:  rgb(2, 6, 23,1);
+      transition: left .4s ease-in-out;
+      z-index: 1500;
+  }
+  .show{
+    left: 0;
+    transition: left .4s ease-in-out;
+  }
+
 }

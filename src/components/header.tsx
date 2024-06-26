@@ -1,9 +1,23 @@
 import me from '../assets/me.jpg'
+import bar from '../assets/bar.svg'
+document.addEventListener('DOMContentLoaded', function() {
+  const menuButton = document.querySelector('.img');
+  menuButton?.addEventListener('click', showMenu);
+});
+
+function showMenu() {
+  const menu = document.querySelector('.left-nav');
+  menu?.classList.toggle('show');
+}
+
 
 export default function Header() {
     return(
 <div className="navbar shadow-md">
-  <div className="flex-1">
+  <div className="flex-1 img">
+    <div className="bg-slate-200 p-1 rounded cursor-pointer md:hidden">
+    <img src={bar} alt="" className='md:hidden block' onClick={showMenu} />
+    </div>
     <a className="btn btn-ghost text-xl">BookStore</a>
   </div>
   <div className="flex-none gap-2">
